@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>YAAS</title>
+</head>
+<body>
+<h1 style="font-weight: 200; color:purple">YAAS</h1>
+
+<form action="/yaas/" method="GET">
+    {% csrf_token %}
+    <input type="submit" value="{% trans "Home" %}" name="_home"> </br>
+</form>
+
+   <form action="" method="post">
+        {% csrf_token %}
+        <br /> <br />
+        {%  for aux in auction_list%}
+        <dl>
+            {% if aux.banded != "banded" %}
+                <dt><a href='/yaas/view/{{ aux.idItem }}/'>{{ aux.titleAuc }}</a></dt><br>
+                <dd><p>{% trans "Date posted: " %}  {{ aux.posted }}</p></dd>
+                <dd><p>{% trans "Date of Deadline: " %}  {{ aux.deadLine }}</p></dd>
+            {% endif %}
+        </dl>
+        {% endfor %}
+    </form>
+
+</body>
+{% if messages %}
+<script>
+    {% for message in messages %}
+    alert("{{ message }}");
+    {% endfor %}
+</script>
+{% endif %}
+</html>

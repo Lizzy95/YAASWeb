@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+{% load i18n %}
+
+<html>
+<head>
+    <title>Auction: {{ name }}</title>
+</head>
+<body>
+    <form action="/yaas/bid/{{ idItem }}/" method="post">
+    {% csrf_token %}
+        <h1 style="font-weight: 200; color:purple">YAAS</h1>
+        <h2 style="font-weight: 100; color: darkslategrey">{% trans "Make new bid" %}</h2>
+        <label for="titleAuc" style="font-weight:bold; color:blue">{% trans "Title Item: " %}</label>
+        <label style="font-size: inherit"> {{ titleAuc }}</label><br />
+        <label for="minPrice" style="font-weight:bold; color:blue">{% trans "Current Price: " %} {{ minPrice }} </label> <br />
+        <input type="number"  step="any" name="minPrice" value="{{ minPrice }}" id="minPrice"><br /> <br />
+    <input type="submit" value="Save">
+    </form>
+</body>
+{% if messages %}
+<script>
+    {% for message in messages %}
+    alert("{{ message }}");
+    {% endfor %}
+</script>
+{% endif %}
+</html>

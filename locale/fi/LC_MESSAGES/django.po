@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-01 16:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: YAAS/settings.py:145
+msgid "English"
+msgstr "English"
+
+#: YAAS/settings.py:146
+msgid "Finnish"
+msgstr "Finnish"
+
+#: templates/auction.html:12
+#, fuzzy
+#| msgid "Create auction"
+msgid "Create New Auction"
+msgstr "Luoda huutokauppa"
+
+#: templates/auction.html:13 templates/bid.html.py:14
+#: templates/editAuction.html:13 templates/show.html.py:10
+msgid "Title Item: "
+msgstr "Otsikko tuote"
+
+#: templates/auction.html:15 templates/editAuction.html.py:14
+#: templates/show.html:12
+msgid "Description: "
+msgstr "Kuvaus"
+
+#: templates/auction.html:17
+msgid "Minimal price: "
+msgstr "Vähimmäishinnan"
+
+#: templates/auction.html:19
+#, fuzzy
+#| msgid "Date of Deadline: "
+msgid "Date of deadline: "
+msgstr "Uudistamisen Määräaika"
+
+#: templates/auction.html:21
+msgid "Hour: "
+msgstr "Tunti"
+
+#: templates/bid.html:13
+msgid "Make new bid"
+msgstr "Tee uusi tarjous"
+
+#: templates/bid.html:16
+msgid "Current Price: "
+msgstr "Vähimmäishinnan"
+
+#: templates/browse.html:12
+msgid "Home"
+msgstr "Koti"
+
+#: templates/browse.html:22 templates/home.html.py:49
+msgid "Date posted: "
+msgstr "Jättöpäivä"
+
+#: templates/browse.html:23 templates/home.html.py:50
+msgid "Date of Deadline: "
+msgstr "Uudistamisen Määräaika: "
+
+#: templates/confirmation.html:12
+msgid "Do you want to save the auction?"
+msgstr "Haluat tallentaa huutokauppa?"
+
+#: templates/confirmation.html:14
+msgid "Yes: "
+msgstr "Kyllä: "
+
+#: templates/confirmation.html:15
+msgid "No: "
+msgstr "Ei: "
+
+#: templates/editAuction.html:12
+#, fuzzy
+#| msgid "Create auction"
+msgid "Edit Auction"
+msgstr "Luoda huutokauppa"
+
+#: templates/editUser.html:11
+msgid "EditEmail"
+msgstr "Muokata"
+
+#: templates/editUser.html:12
+msgid "EditPassword"
+msgstr "Muokkaa salasana"
+
+#: templates/home.html:11
+msgid "Welcome to YAAS."
+msgstr "Tervetuloa YAAS"
+
+#: templates/home.html:14 templates/search.html.py:11
+msgid "Search: "
+msgstr "Haku: "
+
+#: templates/home.html:36
+msgid "Go"
+msgstr "Mennä"
+
+#: templates/home.html:38 templates/show.html.py:25
+msgid "Edit"
+msgstr "Muokata"
+
+#: templates/home.html:39
+msgid "Logout"
+msgstr "Kirjaudu ulos"
+
+#: templates/home.html:40
+msgid "Create auction"
+msgstr "Luoda huutokauppa"
+
+#: templates/home.html:42 templates/loginUser.html.py:17
+msgid "Login"
+msgstr "Kirjaudu sisään"
+
+#: templates/home.html:43
+msgid "Register"
+msgstr "Rekisteri"
+
+#: templates/loginUser.html:11
+msgid "Username"
+msgstr "Käyttäjätunnus"
+
+#: templates/loginUser.html:13
+msgid "Password"
+msgstr "Salasana"
+
+#: templates/show.html:14
+msgid "Current price: "
+msgstr "Vähimmäishinnan"
+
+#: templates/show.html:16
+msgid "Posted date: "
+msgstr "Lähetetty päivämäärä"
+
+#: templates/show.html:18
+msgid "Deadline: "
+msgstr "Uudistamisen Määräaika"
+
+#: templates/show.html:20
+msgid "Auction owner"
+msgstr "Huutokauppa omistaja"
+
+#: templates/show.html:29
+msgid "Ban"
+msgstr "Kielto"
+
+#: templates/show.html:33
+msgid "Bid"
+msgstr "Tarjous"

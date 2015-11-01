@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-01 16:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: YAAS/settings.py:147
+msgid "English"
+msgstr "Ingles"
+
+#: YAAS/settings.py:148
+msgid "Finnish"
+msgstr "Finlandes"
+
+#: YAAS/settings.py:149
+msgid "Spanish"
+msgstr "Español"
+
+#: templates/auction.html:12
+msgid "Create New Auction"
+msgstr "Crear nueva subasta"
+
+#: templates/auction.html:13 templates/bid.html.py:14
+#: templates/editAuction.html:13 templates/show.html.py:10
+msgid "Title Item: "
+msgstr "Nombre del articulo: "
+
+#: templates/auction.html:15 templates/editAuction.html.py:14
+#: templates/show.html:12
+msgid "Description: "
+msgstr "Descripcion: "
+
+#: templates/auction.html:17
+msgid "Minimal price: "
+msgstr "Precio minimo: "
+
+#: templates/auction.html:19
+msgid "Date of deadline: "
+msgstr "Fecha de fecha minima: "
+
+#: templates/auction.html:21
+msgid "Hour: "
+msgstr "Hora"
+
+#: templates/bid.html:13
+msgid "Make new bid"
+msgstr "Hacer nueva oferta"
+
+#: templates/bid.html:16
+msgid "Current Price: "
+msgstr "Precio actual: "
+
+#: templates/browse.html:12
+msgid "Home"
+msgstr "Inicio"
+
+#: templates/browse.html:22 templates/home.html.py:49
+msgid "Date posted: "
+msgstr "Fecha de publicacion: "
+
+#: templates/browse.html:23 templates/home.html.py:50
+msgid "Date of Deadline: "
+msgstr "Fecha de fecha limite: "
+
+#: templates/confirmation.html:12
+msgid "Do you want to save the auction?"
+msgstr "¿Quieres guardar la subasta?"
+
+#: templates/confirmation.html:14
+msgid "Yes: "
+msgstr "Si"
+
+#: templates/confirmation.html:15
+msgid "No: "
+msgstr "No"
+
+#: templates/editAuction.html:12
+msgid "Edit Auction"
+msgstr "Editar subasta"
+
+#: templates/editUser.html:11
+msgid "EditEmail"
+msgstr "Editar correo"
+
+#: templates/editUser.html:12
+msgid "EditPassword"
+msgstr "Editar contraseña"
+
+#: templates/home.html:11
+msgid "Welcome to YAAS."
+msgstr "Bienvenido a YAAS."
+
+#: templates/home.html:14 templates/search.html.py:11
+msgid "Search: "
+msgstr "Buscar"
+
+#: templates/home.html:36
+msgid "Go"
+msgstr "Ir"
+
+#: templates/home.html:38 templates/show.html.py:25
+msgid "Edit"
+msgstr "Editar"
+
+#: templates/home.html:39
+msgid "Logout"
+msgstr "Cerrar sesion"
+
+#: templates/home.html:40
+msgid "Create auction"
+msgstr "Crear oferta"
+
+#: templates/home.html:42 templates/loginUser.html.py:17
+msgid "Login"
+msgstr "Iniciar sesion"
+
+#: templates/home.html:43
+msgid "Register"
+msgstr "Registrarse"
+
+#: templates/loginUser.html:11
+msgid "Username"
+msgstr "Usuario"
+
+#: templates/loginUser.html:13
+msgid "Password"
+msgstr "Contraseña"
+
+#: templates/show.html:14
+msgid "Current price: "
+msgstr "Precio actual: "
+
+#: templates/show.html:16
+msgid "Posted date: "
+msgstr "Fecha de publicacion: "
+
+#: templates/show.html:18
+msgid "Deadline: "
+msgstr "Fecha limite: "
+
+#: templates/show.html:20
+msgid "Auction owner"
+msgstr "Dueño de subasta"
+
+#: templates/show.html:29
+msgid "Ban"
+msgstr "Prohibir"
+
+#: templates/show.html:33
+msgid "Bid"
+msgstr "Oferta"

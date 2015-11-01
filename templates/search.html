@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+{% load i18n %}
+<html>
+<head>
+    <title>YAAS</title>
+</head>
+<body>
+        <h1 style="font-weight: 200; color:purple">YAAS</h1>
+        <form action="/yaas/searchauction/{{ idItem }}/" method="POST">
+            {% csrf_token %}
+            <label for="search" style="font-weight:bold; color:blue">{% trans "Search: " %} </label>
+            <input type="text" name="search" value="" id="search">
+            <input type="submit" value="Search" name="_search">
+        </form>
+
+   <form action="" method="post">
+        {% csrf_token %}
+        <br /> <br />
+        {% if user.is_authenticated %}
+            <input type="submit" value="Edit User" name="_edit">
+            <input type="submit" value="Logout" name="_logout">
+        {% else %}
+            <input type="submit" value="Login" name="_login">
+            <input type="submit" value="Register" name="_register">
+        {% endif %}
+</body>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+</html>

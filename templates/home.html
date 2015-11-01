@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+{% load i18n %}
+
+
+<html>
+<head>
+    <title>YAAS</title>
+</head>
+<body>
+<h1 style="font-weight: 200; color:purple">{% trans "Welcome to YAAS." %}</h1>
+<form action="/yaas/searchauction/" method="POST">
+    {% csrf_token %}
+    <label for="search" style="font-weight:bold; color:blue">{% trans "Search: "%}</label>
+    <input type="text" name="search" value="" id="search">
+    <input type="submit" value="Search" name="_search"> </br>
+</form>
+
+<form action="/yaas/browseauction/" method="GET">
+    {% csrf_token %}
+    <input type="submit" value="Browse" name="_browse"> </br>
+</form>
+
+   <form action="" method="post">
+        {% csrf_token %}
+        <br /> <br />
+       <select name="language">
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}
+            selected="selected"{% endif %} name="{{ language.name_local }}">
+                {{ language.name_local }} ({{ language.code }})
+            </option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="{% trans "Go" %}" name="_go">
+        {% if user.is_authenticated %}
+            <input type="submit" value="{% trans "Edit" %}" name="_edit">
+            <input type="submit" value="{% trans "Logout" %}" name="_logout">
+            <input type="submit" value="{% trans "Create auction" %}" name="_createauction">
+        {% else %}
+            <input type="submit" value="{% trans "Login" %}" name="_login">
+            <input type="submit" value="{% trans "Register" %}" name="_register">
+        {% endif %}
+        {%  for aux in auction_list%}
+        <dl>
+            {% if aux.banded != "banded" %}
+                <dt><a href='/yaas/view/{{ aux.idItem }}/'>{{ aux.titleAuc }}</a></dt><br>
+                <dd><p>{% trans "Date posted: " %} {{ aux.posted }}</p></dd>
+                <dd><p>{% trans "Date of Deadline: " %}  {{ aux.deadLine }}</p></dd>
+            {% endif %}
+        </dl>
+        {% endfor %}
+    </form>
+
+</body>
+{% if messages %}
+<script>
+    {% for message in messages %}
+    alert("{{ message }}");
+    {% endfor %}
+</script>
+{% endif %}
+</html>

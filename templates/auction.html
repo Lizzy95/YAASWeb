@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+{% load i18n %}
+<html>
+<head>
+    <title>YAAS-CreateAuction</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h1 style="font-weight: 200; color:purple">YAAS</h1>
+        <h2 style="font-weight: 100; color: darkslategrey">{% trans "Create New Auction" %}</h2>
+        <label for="titleAuc" style="font-weight:bold; color:blue">{% trans "Title Item: " %}</label> <br />
+        <input type="text" name="titleAuc" value="" id="titleAuc"> <br /> <br />
+        <label for="content" style="font-weight:bold; color:blue">{% trans "Description: " %}</label> <br />
+        <textarea name="content" cols="35" rows="20">{{ content }}</textarea><br /> <br />
+        <label for="minPrice" style="font-weight:bold; color:blue">{% trans "Minimal price: " %}</label> <br />
+        <input type="number" name="minPrice" value="" id="minPrice"> <br /> <br />
+        <label for="deadLine" style="font-weight:bold; color:blue">{% trans "Date of deadline: " %}</label> <br />
+        <input type="date" value="" name="deadLine">
+        <label for="hour" style="font-weight:bold; color:blue">{% trans "Hour: " %}</label>
+        <input type="number" min="0" max="24" name="hour">
+        : <input type="number" min="0" max="60" name="minu"> <br /> <br />
+        <input type="submit" value="Save" style="width:90px; height:14px; font-size: medium">
+    </form>
+</body>
+
+{% if messages %}
+<script>
+    {% for message in messages %}
+    alert("{{ message }}");
+    {% endfor %}
+</script>
+{% endif %}
+</html>

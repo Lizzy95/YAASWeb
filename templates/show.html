@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+{% load i18n %}
+<html>
+<head>
+    <title>YAAS-ShowAuction</title>
+</head>
+<body>
+    <h1 style="font-weight: 200; color:purple">YAAS</h1>
+    <label for="titleAuc" style="font-weight:bold; color:blue">{% trans "Title Item: " %}</label> <br />
+    <p>{{ titleAuc }}</p>
+    <label for="content" style="font-weight:bold; color:blue">{%  trans "Description: " %} </label> <br />
+    <p>{{ content }}</p>
+    <label for="minPrice" style="font-weight:bold; color:blue">{% trans "Current price: " %} </label> <br />
+    <p>{{ minPrice }}</p>
+    <label for="posted" style="font-weight:bold; color:blue">{% trans "Posted date: " %} </label> <br />
+    <p>{{ posted }}</p>
+    <label for="deadLine" style="font-weight:bold; color:blue">{% trans "Deadline: " %}</label> <br />
+    <p>{{ deadLine }}</p>
+    <label for="author" style="font-weight:bold; color:blue">{% trans "Auction owner" %} </label> <br />
+    <p>{{ author }}</p>
+    <form action="" method="post">
+    {% csrf_token %}
+    {% if user.username == author %}
+        <input type="submit" value="{% trans "Edit" %}" name="_edit">
+    {% endif %}
+
+    {% if user.is_superuser %}
+        <input type="submit" value="{% trans "Ban" %}" name="_ban">
+    {% endif %}
+    {% if user.is_authenticated  %}
+        {% if user.username != author %}
+            {% if resolve != "resolve" %}
+                <input type="submit" value="{% trans "Bid" %}" name="_bid">
+            {% endif %}
+        {% endif %}
+    {% endif %}
+    </form>
+</body>
+</html>
